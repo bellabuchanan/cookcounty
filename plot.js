@@ -370,3 +370,9 @@ function getProb() {
 }
 
 
+// start things off
+
+const dataset2 = await d3.json("https://raw.githubusercontent.com/bellabuchanan/Digital-Humanities/main/bella.json")
+const goes = ["white","poc"]
+const recNames = ["RNC", "If Rel, PTS 1-3",  "If Rel, PTS HC", "If Rel, MC", "If Rel, COEM","If Rel, PTM"]
+drawChart2(dataset2,goes,recNames);
