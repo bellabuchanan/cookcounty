@@ -346,3 +346,27 @@ async function drawChart2(dataset, goes,recNames) {
   
 }
 
+// helpter functions 
+getRandomNumberInRange = (min, max) => Math.random() * (max - min) + min
+
+getRandomValue = arr => arr[Math.floor(getRandomNumberInRange(0, arr.length))]
+
+getStatusKey = ({go, rec}) => [go, rec].join("--")
+
+sentenceCase = str => [
+  str.slice(0, 1).toUpperCase(),
+  str.slice(1),
+].join("")
+
+function getProb() {
+  let result;
+  const a = getRandomNumberInRange(0,100)
+  if (a < 16) {
+    result = 0;
+  } else {
+    result = 1;
+  }
+  return result;
+}
+
+
